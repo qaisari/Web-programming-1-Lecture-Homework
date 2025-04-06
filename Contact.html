@@ -4,6 +4,7 @@
         <title>HTML5</title>
         <meta charset="utf-8">
         <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
         <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
@@ -19,13 +20,48 @@
         </aside>
         <section>
             <article>
-                <h2>Contact page</h2>
-                <h2>Aenean nummy odio orci</h2>
-                <p>Phasellus wisi nulla...</p>
+                <h2>Contact Table</h2>
+                <div class="employee-form">
+                    <form onsubmit="event.preventDefault();onFormSubmit();">
+                        <div>
+                            <label>Full Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                            <input type="text" name="fullName" id="fullName">
+                        </div>
+                        <div>
+                            <label>Email Id</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div>
+                            <label>Salary</label>
+                            <input type="text" name="salary" id="salary">
+                        </div>
+                        <div>
+                            <label>City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div  class="form-action-buttons">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
             </article>
             <article>
-                <h2>Aenean nummy odio orci</h2>
-                <p>Phasellus wisi nulla...</p>
+                <div class = "employees-table">
+                    <table class="list" id="employeeList">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Email Id</th>
+                                <th>Salary</th>
+                                <th>City</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            
+                        </tbody>
+                    </table>
+                </div>
             </article>
         </section>
         <footer>

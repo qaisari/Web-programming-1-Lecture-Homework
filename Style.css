@@ -15,7 +15,7 @@ ul {
     padding: 0;
     margin: 0;
 }
-a{
+nav a{
     float: left;
     background-color: green;
     color: white;
@@ -25,7 +25,7 @@ a{
     border-right: 1px solid white;
 }
 li { display: inline; }
-a:hover { background-color: #ff3300; }
+nav a:hover { background-color: #ff3300; }
 aside {
     float: left;
     width: 160px;
@@ -44,6 +44,79 @@ footer {
     padding: 0.5px;
     padding-left: 5px;
 }
-.active {
-    border-bottom: 4px solid blue;
+.employee-form {
+    margin-bottom: 10px;
+    padding: 10px;
+    /* margin: auto; */
+    /* width: 50%; */
+}
+.employees-table {
+    /* border-style: solid; */
+    padding: 10px;
+    width: auto;
+}
+body > table{
+    width: 80%;
+}
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 30%;
+    background-color: black;
+    color: white;
+    padding: 10px 18px;
+    /* margin: 0px 0; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form div.form-action-buttons{
+    text-align: right;
+}
+.delete{
+    display: right;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #ff0000;
+}
+
+.edit{
+    display: right;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #4ab900;
+    margin-right: 10px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+.hide{
+    display:none;
 }
