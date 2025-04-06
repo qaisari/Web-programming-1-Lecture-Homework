@@ -1,0 +1,49 @@
+header, footer {
+    background-color: gray;
+    color: white;
+    padding: 0.5em;
+    width: 100%;
+}
+h1.header {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+a{
+    float: left;
+    background-color: green;
+    color: white;
+    padding: 0.2em 0.6em;
+    width: 6em;
+    text-decoration: none;
+    border-right: 1px solid white;
+}
+li { display: inline; }
+a:hover { background-color: #ff3300; }
+aside {
+    float: left;
+    width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+section {
+    border-left: 1px solid gray;
+    margin-left: 190px;
+    padding: 1em;
+}
+footer {
+    background-color: rgb(144, 144, 144);
+    color: white;
+    width: 100%;
+    padding: 0.5px;
+    padding-left: 5px;
+}
+.active {
+    border-bottom: 4px solid blue;
+}
