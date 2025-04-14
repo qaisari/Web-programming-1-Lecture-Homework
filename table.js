@@ -9,6 +9,7 @@ function onFormSubmit() {
             updateRecord(formData);
         resetForm();
     }
+
 }
 function readFormData() {
     var formData = {};
@@ -18,9 +19,19 @@ function readFormData() {
     formData["city"] = document.getElementById("city").value;
     return formData;
 }
-
+function updateRecord(formData) {
+    array[selectedIndex].fullName=formData.fullName;
+    array[selectedIndex].email=formData.email;
+    array[selectedIndex].salary=formData.salary;
+    array[selectedIndex].city=formData.city;
+    printArray();
+}
 function insertNewRecord(data) {
-    array[array.length]= {"fullName":data.fullName,"email":data.email,"salary":data.salary,"city":data.city};
+    array[array.length]= {
+        "fullName":data.fullName,
+        "email":data.email,
+        "salary":data.salary,
+        "city":data.city};
     printArray();
 }
 
@@ -57,17 +68,10 @@ function onEdit(index) {
     document.getElementById("city").value = array[index].city;
     selectedIndex=index;
 }
-function updateRecord(formData) {
-    array[selectedIndex].fullName=formData.fullName;
-    array[selectedIndex].email=formData.email;
-    array[selectedIndex].salary=formData.salary;
-    array[selectedIndex].city=formData.city;
-    printArray();
-}
 function onDelete(index) {
     if (confirm('Are you sure to delete this record ?')) {
         array.splice(index, 1); // Deleting the entry with the specified index
-        resetForm();
+        // resetForm();
         printArray();
     }
 }
