@@ -101,6 +101,7 @@ form div.form-action-buttons{
     color: #ffffff;
     padding: 5px;
     background-color: #ff0000;
+    border-radius: 5px;
 }
 
 .edit{
@@ -111,6 +112,7 @@ form div.form-action-buttons{
     padding: 5px;
     background-color: #4ab900;
     margin-right: 10px;
+    border-radius: 5px;
 }
 
 label.validation-error{
@@ -119,4 +121,60 @@ label.validation-error{
 }
 .hide{
     display:none;
+}
+.web-worker{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.with{
+    border: solid 1px gray;
+    margin-left: 15px;
+    padding: 5px;
+    width: 50%;
+}
+.without{
+    border: solid 1px gray;
+    padding: 5px;
+    width: 50%;
+}
+#sse-result{
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: lightgray;
+}
+.Geolocation{
+    display: flex;
+}
+#content-holder{
+    margin-left: 20px;
+}
+.sse{
+    display:flex;
+    margin-bottom: 5px;
+}
+.ssebutton{
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+#div1, #div2 {
+    float:left;
+    width:200px;
+    height:150px;
+    margin:10px;
+    padding:10px;
+    border:1px solid #aaaaaa;
+}
+#drag1{
+    margin-top: 10px;
+}
+#testcanva{
+    width: fit-content;
+    height: fit-content;
+}
+.svg{
+    display: flex;
 }
