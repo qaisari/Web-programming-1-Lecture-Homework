@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5</title>
+        <meta charset="utf-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="table.js"></script>
+    </head>
+    <body>
+        <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Introduction.html">Introduction</a></li>
+                <li><a href="Table.html" class="active">Table</a></li>
+                <li><a href="HTML5.html">HTML5</a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <aside>
+                <h2>Table</h2>
+            </aside>
+            <section>
+                <article>
+                    <h2>Contact Table</h2>
+                    <div class="employee-form">
+                        <form onsubmit="event.preventDefault();onFormSubmit();">
+                            <div>
+                                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                                <input type="text" name="fullName" id="fullName" placeholder="Full Name">
+                            </div>
+                            <div>
+                                <input type="text" name="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div>
+                                <input type="number" name="salary" id="salary" min="1000" max="100000" placeholder="Salary" required>
+                            </div>
+                            <div>
+                                <input type="text" name="city" id="city" placeholder="City" required>
+                            </div>
+                            <div  class="form-action-buttons">
+                                <input type="submit" value="Submit">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </article>
+                <article>
+                    <div class = "employees-table">
+                        <table class="list" id="employeeList">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Email Id</th>
+                                    <th>Salary</th>
+                                    <th>City</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <p>Ayman: GFQS7D Junior: GXWL91</p>
+        </footer>
+    </body>
+</html>

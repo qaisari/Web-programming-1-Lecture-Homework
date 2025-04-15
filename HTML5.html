@@ -12,102 +12,104 @@
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="Introduction.html">Introduction</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Table.html">Table</a></li>
                 <li><a href="HTML5.html" class="active">HTML5</a></li>
             </ul>
         </nav>
-        <aside>
-            <h2>HTML5 features</h2>
-        </aside>
-        <section>
-            <article>
-                <fieldset>
-                    <legend><h2>Web Storage</h2></legend>
-                    <p><strong>Session Storage</strong></p>
-                    <p id="session"></p>
-                    <p>Refresh the page to increase number of hits.</p>
-                    <p>Close the window and open it again and check the result.</p>
-                    <!--////////////////////////////////////////////////////////-->
-                    <p><strong>Local Storage</strong></p>
-                    <p id="local"></p>
-                    <p>Refresh the page to increase number of hits.</p>
-                    <p>Close the window and open it again and check the result.</p>
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>Geolocation</h2></legend>
-                    <p>Click the button to get your coordinates.</p>
-                    <button onclick="getLocation()">Location</button>
-                    <div class="Geolocation">
-                        <p id="demo">Google maps: Waiting for GPS coordinates ...</p>
-                        <p id="content-holder"></p>
-                    </div>
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>Web Worker</h2></legend>
-                    <div class="web-worker">
-                        <div class="without">
-                            <p><strong>Without-Web-Worker</strong></p>
-                            <button onclick="withoutBigLoop()">Big Loop</button>
-                            <button onclick="withoutSayHello()">Say Hello</button>
+        <div class="center">
+            <aside>
+                <h2>HTML5 features</h2>
+            </aside>
+            <section>
+                <article>
+                    <fieldset>
+                        <legend><h2>Web Storage</h2></legend>
+                        <p><strong>Session Storage</strong></p>
+                        <p id="session"></p>
+                        <p>Refresh the page to increase number of hits.</p>
+                        <p>Close the window and open it again and check the result.</p>
+                        <!--////////////////////////////////////////////////////////-->
+                        <p><strong>Local Storage</strong></p>
+                        <p id="local"></p>
+                        <p>Refresh the page to increase number of hits.</p>
+                        <p>Close the window and open it again and check the result.</p>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>Geolocation</h2></legend>
+                        <p>Click the button to get your coordinates.</p>
+                        <button onclick="getLocation()">Location</button>
+                        <div class="Geolocation">
+                            <p id="demo">Google maps: Waiting for GPS coordinates ...</p>
+                            <p id="content-holder"></p>
                         </div>
-                        <!--///////////////////////////////////////////////////////-->
-                        <div class="with">
-                            <p><strong>With-Web-Worker</strong></p>
-                            <button onclick="withBigLoop()">Big Loop</button>
-                            <button onclick="withSayHello()">Say Hello</button>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>Web Worker</h2></legend>
+                        <div class="web-worker">
+                            <div class="without">
+                                <p><strong>Without-Web-Worker</strong></p>
+                                <button onclick="withoutBigLoop()">Big Loop</button>
+                                <button onclick="withoutSayHello()">Say Hello</button>
+                            </div>
+                            <!--///////////////////////////////////////////////////////-->
+                            <div class="with">
+                                <p><strong>With-Web-Worker</strong></p>
+                                <button onclick="withBigLoop()">Big Loop</button>
+                                <button onclick="withSayHello()">Say Hello</button>
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>SSE</h2></legend>
-                    <div class="sse">
-                        <p><strong>Getting server updates</strong></p>
-                        <button onclick="serverSentEvent()" class="ssebutton">Start SSE</button>
-                    </div>
-                    <div id="sse-result"></div>
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>Drag and Drop</h2></legend>
-                    <p><strong>Back and Forth</strong></p></legend>
-                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <img src="nje.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="150">
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>Canvas</h2></legend>
-                    <div id="testcanva">
-                        <button onclick="drawShape()" class="canvasbutton">canvas</button><br>
-                        <canvas id="mycanvas"></canvas>
-                    </div>
-                </fieldset>
-            </article>
-            <article>
-                <fieldset>
-                    <legend><h2>SVG</h2></legend>
-                    <div class="svg">
-                        <svg width="fit-content" height="fit-content">
-                            <circle cx="25" cy="25" r="20" stroke="green" stroke-width="4" fill="yellow"/>
-                        </svg>
-                        <svg width="fit-content" height="fit-content">
-                            <rect x="10" y="10" rx="10" ry="10" width="80" height="80" fill="red" stroke="black" stroke-width="5" opacity="0.5"/>
-                        </svg>
-                        <svg width="400" height="100"> 
-                            <rect width="100" height="50" style="fill:rgb(0,0,255);stroke-width:5;stroke:rgb(0,0,0)" /> 
-                        </svg>
-                    </div>
-                </fieldset>
-            </article>
-        </section>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>SSE</h2></legend>
+                        <div class="sse">
+                            <p><strong>Getting server updates</strong></p>
+                            <button onclick="serverSentEvent()" class="ssebutton">Start SSE</button>
+                        </div>
+                        <div id="sse-result"></div>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>Drag and Drop</h2></legend>
+                        <p><strong>Back and Forth</strong></p></legend>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <img src="nje.png" draggable="true" ondragstart="drag(event)" id="drag1" width="200" height="150">
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>Canvas</h2></legend>
+                        <div id="testcanva">
+                            <button onclick="drawShape()" class="canvasbutton">canvas</button><br>
+                            <canvas id="mycanvas"></canvas>
+                        </div>
+                    </fieldset>
+                </article>
+                <article>
+                    <fieldset>
+                        <legend><h2>SVG</h2></legend>
+                        <div class="svg">
+                            <svg width="fit-content" height="fit-content">
+                                <circle cx="25" cy="25" r="20" stroke="green" stroke-width="4" fill="yellow"/>
+                            </svg>
+                            <svg width="fit-content" height="fit-content">
+                                <rect x="10" y="10" rx="10" ry="10" width="80" height="80" fill="red" stroke="black" stroke-width="5" opacity="0.5"/>
+                            </svg>
+                            <svg width="400" height="100"> 
+                                <rect width="100" height="50" style="fill:rgb(0,0,255);stroke-width:5;stroke:rgb(0,0,0)" /> 
+                            </svg>
+                        </div>
+                    </fieldset>
+                </article>
+            </section>
+        </div>
         <footer>
             <p>Ayman: GFQS7D Junior: GXWL91</p>
         </footer>
