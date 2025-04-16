@@ -294,3 +294,31 @@ label.validation-error{
     border-radius: 8px;
     border: 1px solid #ccc;
 }
+
+.animal-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    max-width: 300px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .animal-sound {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  .animal-action {
+    color: #e74c3c;
+    font-style: italic;
+  }
+  .game-container{
+    align-content: center;
+  }
+  
