@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5</title>
+        <meta charset="utf-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src = "ajax.js"></script>
+    </head>
+    <body>
+        <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Introduction.html">Introduction</a></li>
+                <li><a href="Table.html">Table</a></li>
+                <li><a href="HTML5.html">HTML5</a></li>
+                <li><a href="ChartJS.html">ChartJS</a></li>
+                <li><a href="ajax.html" class="active">ChartJS</a></li>
+            </ul>
+        </nav>
+        <div class="center" >
+            <aside>
+                <h2>Home</h2>
+            </aside>
+            <section>
+                <article>
+                    <div id = 'code'></div>
+                    <div id = 'readDiv'></div>
+                    <div id = 'createDiv'>
+                    <h1>Create</h1>
+                    Name (required, max 30): <input id="name1" type="text"></input><br>
+                    City (required, max 30): <input id="city1" type="text"></input><br>
+                    Phone (required, max 30): <input id="phone1" type="text"></input><br>
+                    <button type="submit" onclick="create();">Create</button><br>
+                    <div id = 'createResult'></div>
+                    </div> 
+                    <div id = 'updateDiv'>
+                    <h1>Update</h1>
+                    ID (required): <input id="idUpd" type="text"></input><br> 
+                    <button type="submit" onclick="getDataForId();">getDataForId</button><br>
+                    Name (required, max 30): <input id="name2" type="text"></input><br>
+                    City (required, max 30): <input id="city2" type="text"></input><br>
+                    Phone (required, max 30): <input id="phone2" type="text"></input><br>
+                    <button type="submit" onclick="update();">Update</button><br>
+                    <div id = 'updateResult'></div>      
+                    </div> 
+                    <div id = 'deleteDiv'>
+                    <h1>Delete</h1>
+                    ID (required): <input id="idDel" type="text"></input><br> 
+                    <button type="submit" onclick="deleteF();">Delete</button><br>
+                    <div id = 'deleteResult'></div>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <p>Ayman: GFQS7D Junior: GXWL91</p>
+        </footer>
+    </body>
+</html>
