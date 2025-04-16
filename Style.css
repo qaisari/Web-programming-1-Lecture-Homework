@@ -340,4 +340,125 @@ button {
     font-size: 1em; /* Adjust font size */
     font-family: Arial, sans-serif; /* Use a clean font */
 }
+
+/* ... your existing styles ... */
+
+/* Styles for the React components container */
+#root {
+    /* Add any specific container styles if needed, 
+       but background should come from .center or section/article */
+    padding: 1em; /* Example padding */
+}
+
+/* Styles for the navigation within the React app */
+.react-component-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px; /* Space below the buttons */
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.1);  */
+    border-radius: 8px; /* Optional rounded corners */
+    justify-content: center; /* Center the buttons */
+}
+
+/* Style for the buttons within the React nav */
+.react-component-nav .nav-btn {
+    /* Inherit general button styles or define specific ones */
+    border: 1px solid #ccc; /* Example border */
+    padding: 8px 15px;
+    background-color: #f0f0f0; /* Default button color */
+    color: #333; /* Default text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.react-component-nav .nav-btn:hover {
+    background-color: #e0e0e0; /* Hover color */
+}
+
+/* Style for the active button in the React nav */
+.react-component-nav .nav-btn.active {
+    background-color: #007bff; /* Active color - match your site's theme */
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Container for the active React component (Tip or RPS) */
+.wrap {
+    /* This class was used for centering in the inline styles. 
+       Adjust if needed based on your main layout. 
+       Maybe just add padding/margin. */
+    padding: 20px 0; 
+}
+
+/* Styling for the "card" look of each component */
+.component-card {
+    background-color: #ffffff; /* White background for the card */
+    color: #333333; /* Dark text color for the card */
+    padding: 25px;
+    border-radius: 8px; /* Match other elements */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    max-width: 500px; /* Limit width */
+    margin: 0 auto; /* Center the card if needed */
+}
+
+.component-card h2 {
+    margin-bottom: 20px;
+    color: #0056b3; /* Heading color - match theme */
+    text-align: center;
+}
+
+.component-card label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.component-card input,
+.component-card select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Styles specific to Rock-Paper-Scissors */
+.rps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.rps-btn {
+    /* Style RPS buttons like other site buttons */
+    padding: 10px 15px;
+    background-color: #468624; /* Example color - match theme */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.rps-btn:hover {
+    background-color: #4a57a3; /* Darker hover */
+}
+
+/* Style for result text */
+.result {
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    background-color: #468624; /* Light background for result */
+    border-radius: 4px;
+}
+
+/* ... rest of your existing styles ... */
   

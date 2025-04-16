@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REACT</title>
+        <meta charset="utf-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- <style>
+          :root{--bg1:#141e30;--bg2:#243b55;--accent:#00b4db;--accent2:#0083b0;--white:#fff;--card:#fafafa;--dark:#222}
+          *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
+          body{min-height:100vh;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--white);display:flex;flex-direction:column}
+          nav{display:flex;gap:10px;padding:18px 26px;backdrop-filter:blur(10px)}
+          button{border:none;padding:11px 22px;border-radius:24px;font-weight:600;cursor:pointer;transition:.25s}
+          .nav-btn{background:rgba(255,255,255,.12);color:var(--white)}
+          .nav-btn:hover{transform:translateY(-2px)}
+          .active{background:var(--accent)}
+          .wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 16px}
+          .card{width:100%;max-width:500px;padding:34px 30px;border-radius:28px;background:var(--card);color:var(--dark);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+          h2{margin-bottom:22px}
+          label{display:block;font-weight:600;margin-top:14px}
+          input,select{width:100%;padding:12px 14px;margin-top:6px;border:2px solid #e2e8f0;border-radius:14px;font-size:1rem}
+          .rps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+          .rps-btn{background:var(--accent2);color:var(--white)}
+          .rps-btn:hover{filter:brightness(1.15)}
+          .result{margin-top:16px;font-weight:600}
+        </style> -->
+        <!-- <style>
+          :root{--bg1:#141e30;--bg2:#243b55;--accent:#00b4db;--accent2:#0083b0;--white:#fff;--card:#fafafa;--dark:#222}
+          *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,sans-serif}
+          /* Apply gradient background only to the React app container, not the whole body */
+          #root > div { /* Target the main div rendered by the App component */
+            min-height: 100vh;
+            background:linear-gradient(135deg,var(--bg1),var(--bg2));
+            color:var(--white);
+            display:flex;
+            flex-direction:column;
+          }
+          /* Adjust body styles if needed, remove background if it conflicts */
+          body {
+            margin: 0; /* Ensure no default body margin */
+            /* background: none; Remove if the gradient is only for the React part */
+          }
+          /* Keep the rest of the styles as they are */
+          nav{display:flex;gap:10px;padding:18px 26px;backdrop-filter:blur(10px)}
+          button{border:none;padding:11px 22px;border-radius:24px;font-weight:600;cursor:pointer;transition:.25s}
+          .nav-btn{background:rgba(255,255,255,.12);color:var(--white)}
+          .nav-btn:hover{transform:translateY(-2px)}
+          .active{background:var(--accent)}
+          .wrap{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 16px}
+          .card{width:100%;max-width:500px;padding:34px 30px;border-radius:28px;background:var(--card);color:var(--dark);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+          h2{margin-bottom:22px}
+          label{display:block;font-weight:600;margin-top:14px}
+          input,select{width:100%;padding:12px 14px;margin-top:6px;border:2px solid #e2e8f0;border-radius:14px;font-size:1rem}
+          .rps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+          .rps-btn{background:var(--accent2);color:var(--white)}
+          .rps-btn:hover{filter:brightness(1.15)}
+          .result{margin-top:16px;font-weight:600}
+        </style> -->
+    </head>
+    <body>
+        <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Introduction.html">Introduction</a></li>
+                <li><a href="Table.html">Table</a></li>
+                <li><a href="HTML5.html">HTML5</a></li>
+                <li><a href="ChartJS.html">ChartJS</a></li>
+                <li><a href="ajax.html">AJAX</a></li>
+                <li><a href="oojs.html">OOJS</a></li>
+                <li><a href="react.html" class="active">REACT</a></li>
+            </ul>
+        </nav>
+        <script type="text/babel">
+          const { useState } = React;
+      
+          function App(){
+            const [view,set]=useState('tip');
+            return(
+              <div style={{display:'flex',flexDirection:'column',minHeight:'100vh'}}>
+                <nav>
+                  <button className={`nav-btn ${view==='tip'&&'active'}`} onClick={()=>set('tip')}>Tip Calculator</button>
+                  <button className={`nav-btn ${view==='rps'&&'active'}`} onClick={()=>set('rps')}>Rock‑Paper‑Scissors</button>
+                </nav>
+                <div className="wrap">{view==='tip'?<Tip/>:<RPS/>}</div>
+              </div>
+            );
+          }
+      
+          function Tip(){
+            const [bill,setBill]=useState(''),[pct,setPct]=useState(10);
+            const b=parseFloat(bill)||0,tip=(b*pct)/100;
+            return(
+              <div className="card">
+                <h2>Tip Calculator</h2>
+                <label>Bill (HUF)</label>
+                <input type="number" value={bill} onChange={e=>setBill(e.target.value)}/>
+                <label>Tip %</label>
+                <select value={pct} onChange={e=>setPct(+e.target.value)}>
+                  {[5,10,12,15,18,20,25].map(p=><option key={p}>{p}</option>)}
+                </select>
+                <div className="result">
+                  Tip: {tip.toFixed(2)} HUF — Total: {(b+tip).toFixed(2)} HUF
+                </div>
+              </div>
+            );
+          }
+      
+          function RPS(){
+            const choices=['Rock','Paper','Scissors'];
+            const [p,setP]=useState(null),[c,setC]=useState(null),[r,setR]=useState('');
+            const [score,setScore]=useState({win:0,lose:0,draw:0});
+            function play(choice){
+              const comp=choices[Math.random()*3|0]; setP(choice); setC(comp);
+              const res=outcome(choice,comp); setR(res); setScore(s=>({...s,[res]:s[res]+1}));
+            }
+            const outcome=(a,b)=>a===b?'draw':
+              (a==='Rock'&&b==='Scissors')||(a==='Paper'&&b==='Rock')||(a==='Scissors'&&b==='Paper')?'win':'lose';
+            return(
+              <div className="card">
+                <h2>Rock‑Paper‑Scissors</h2>
+                <div className="rps-grid">
+                  {choices.map(ch=><button key={ch} className="rps-btn" onClick={()=>play(ch)}>{ch}</button>)}
+                </div>
+                {p&&(
+                  <div className="result">
+                    You: {p} &nbsp;|&nbsp; CPU: {c} &nbsp;→&nbsp; {r.toUpperCase()}<br/>
+                    Wins {score.win} · Losses {score.lose} · Draws {score.draw}
+                  </div>
+                )}
+              </div>
+            );
+          }
+      
+          ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+        </script>
+        <div class="center" >
+            <aside>
+                <h2>React</h2>
+            </aside>
+            <section>
+                <article>
+                  <div id="root"></div>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <p>Ayman: GFQS7D Junior: GXWL91</p>
+        </footer>
+    </body>
+</html>
