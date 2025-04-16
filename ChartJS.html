@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChartJS</title>
+        <meta charset="utf-8">
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Introduction.html">Introduction</a></li>
+                <li><a href="Table.html">Table</a></li>
+                <li><a href="HTML5.html">HTML5</a></li>
+                <li><a href="ChartJS.html" class="active">ChartJS</a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <aside>
+                <h2>ChartJS</h2>
+            </aside>
+            <section>
+                <article>
+                    <h2>Data Table</h2>
+                    <p>Click a row in the table to generate a chart.</p>
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Label</th>
+                                <th>Value1</th>
+                                <th>Value2</th>
+                                <th>Value3</th>
+                                <th>Value4</th>
+                                <th>Value5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DataSet A</td>
+                                <td>12</td>
+                                <td>19</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>DataSet B</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>20</td>
+                                <td>5</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>DataSet C</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>13</td>
+                                <td>15</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>DataSet D</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>DataSet E</td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>15</td>
+                                <td>18</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article>
+                    <h2>Generated Chart</h2>
+                    <div id="chartContainer" style="width: 80%; max-width: 600px; margin-top: 20px;">
+                        <canvas id="dynamicChart"></canvas>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <footer>
+            <p>Ayman: GFQS7D Junior: GXWL91</p>
+        </footer>
+    </body>
+</html>

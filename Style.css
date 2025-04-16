@@ -265,3 +265,32 @@ label.validation-error{
 .svg{
     display: flex;
 }
+
+#dataTable {
+    /* Your existing table styles */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#dataTable th, #dataTable td {
+    /* Your existing cell styles */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for clickable rows */
+.data-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.data-row:hover {
+    background-color: rgba(0, 128, 0, 0.3); /* Highlight on hover */
+}
+
+#chartContainer {
+    background-color: #fff; /* Give chart a white background */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
