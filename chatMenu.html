@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Table with Chart Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+        cursor: pointer;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+      .selected {
+        background-color: #d4edda;
+      }
+      #chartContainer {
+        margin-top: 30px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Number Table with Chart Visualization</h1>
+
+    <table id="numberTable">
+      <thead>
+        <tr>
+          <th>Row 1</th>
+          <th>Row 2</th>
+          <th>Row 3</th>
+          <th>Row 4</th>
+          <th>Row 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12</td>
+          <td>25</td>
+          <td>38</td>
+          <td>42</td>
+          <td>57</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>19</td>
+          <td>31</td>
+          <td>44</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>22</td>
+          <td>35</td>
+          <td>48</td>
+          <td>52</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>28</td>
+          <td>33</td>
+          <td>46</td>
+          <td>59</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>21</td>
+          <td>30</td>
+          <td>41</td>
+          <td>55</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="chartContainer">
+      <canvas id="dataChart"></canvas>
+    </div>
+
+    <script>
+      // Initialize chart
+      const ctx = document.getElementById("dataChart").getContext("2d");
+      let chart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Column 1", "Column 2", "Column 3", "Column 4", "Column 5"],
+          datasets: [
+            {
+              label: "Selected Row Data",
+              data: [],
+              borderColor: "rgb(75, 192, 192)",
+              tension: 0.1,
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Add click event listeners to table rows
+      const table = document.getElementById("numberTable");
+      const rows = table.getElementsByTagName("tr");
+
+      // Skip the header row (index 0)
+      for (let i = 1; i < rows.length; i++) {
+        rows[i].addEventListener("click", function () {
+          // Remove selected class from all rows
+          for (let j = 1; j < rows.length; j++) {
+            rows[j].classList.remove("selected");
+          }
+
+          // Add selected class to clicked row
+          this.classList.add("selected");
+
+          // Get data from the row
+          const cells = this.getElementsByTagName("td");
+          const rowData = Array.from(cells).map((cell) =>
+            parseInt(cell.textContent)
+          );
+
+          // Update chart
+          chart.data.datasets[0].data = rowData;
+          chart.data.datasets[0].label = `Row ${i} Data`;
+          chart.update();
+        });
+      }
+
+      // Select the first row by default
+      if (rows.length > 1) {
+        rows[1].click();
+      }
+    </script>
+  </body>
+</html>
