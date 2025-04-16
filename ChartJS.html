@@ -4,6 +4,7 @@
         <title>ChartJS</title>
         <meta charset="utf-8">
         <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         <header><h1 class="header">Web-programming-1 Lecture Homework</h1></header>
@@ -16,6 +17,66 @@
                 <li><a href="ChartJS.html" class="active">ChartJS</a></li>
             </ul>
         </nav>
+        <script>
+          // Initialize chart
+          const ctx = document.getElementById("dataChart").getContext("2d");
+          let chart = new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: ["Column 1", "Column 2", "Column 3", "Column 4", "Column 5"],
+              datasets: [
+                {
+                  label: "Selected Row Data",
+                  data: [],
+                  borderColor: "rgb(75, 192, 192)",
+                  tension: 0.1,
+                  fill: false,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                },
+              },
+            },
+          });
+    
+          // Add click event listeners to table rows
+          const table = document.getElementById("numberTable");
+          const rows = table.getElementsByTagName("tr");
+    
+          // Skip the header row (index 0)
+          for (let i = 1; i < rows.length; i++) {
+            rows[i].addEventListener("click", function () {
+              // Remove selected class from all rows
+              for (let j = 1; j < rows.length; j++) {
+                rows[j].classList.remove("selected");
+              }
+    
+              // Add selected class to clicked row
+              this.classList.add("selected");
+    
+              // Get data from the row
+              const cells = this.getElementsByTagName("td");
+              const rowData = Array.from(cells).map((cell) =>
+                parseInt(cell.textContent)
+              );
+    
+              // Update chart
+              chart.data.datasets[0].data = rowData;
+              chart.data.datasets[0].label = `Row ${i} Data`;
+              chart.update();
+            });
+          }
+    
+          // Select the first row by default
+          if (rows.length > 1) {
+            rows[1].click();
+          }
+        </script>
         <div class="center">
             <aside>
                 <h2>ChartJS</h2>
@@ -24,65 +85,59 @@
                 <article>
                     <h2>Data Table</h2>
                     <p>Click a row in the table to generate a chart.</p>
-                    <table id="dataTable">
-                        <thead>
-                            <tr>
-                                <th>Label</th>
-                                <th>Value1</th>
-                                <th>Value2</th>
-                                <th>Value3</th>
-                                <th>Value4</th>
-                                <th>Value5</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>DataSet A</td>
-                                <td>12</td>
-                                <td>19</td>
-                                <td>3</td>
-                                <td>5</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>DataSet B</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>20</td>
-                                <td>5</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>DataSet C</td>
-                                <td>3</td>
-                                <td>10</td>
-                                <td>13</td>
-                                <td>15</td>
-                                <td>22</td>
-                            </tr>
-                            <tr>
-                                <td>DataSet D</td>
-                                <td>5</td>
-                                <td>7</td>
-                                <td>8</td>
-                                <td>12</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <td>DataSet E</td>
-                                <td>8</td>
-                                <td>12</td>
-                                <td>15</td>
-                                <td>18</td>
-                                <td>20</td>
-                            </tr>
-                        </tbody>
+                    <table id="numberTable">
+                      <thead>
+                        <tr>
+                          <th>Row 1</th>
+                          <th>Row 2</th>
+                          <th>Row 3</th>
+                          <th>Row 4</th>
+                          <th>Row 5</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>12</td>
+                          <td>25</td>
+                          <td>38</td>
+                          <td>42</td>
+                          <td>57</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>19</td>
+                          <td>31</td>
+                          <td>44</td>
+                          <td>50</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>22</td>
+                          <td>35</td>
+                          <td>48</td>
+                          <td>52</td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td>28</td>
+                          <td>33</td>
+                          <td>46</td>
+                          <td>59</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>21</td>
+                          <td>30</td>
+                          <td>41</td>
+                          <td>55</td>
+                        </tr>
+                      </tbody>
                     </table>
                 </article>
                 <article>
                     <h2>Generated Chart</h2>
-                    <div id="chartContainer" style="width: 80%; max-width: 600px; margin-top: 20px;">
-                        <canvas id="dynamicChart"></canvas>
+                    <div id="chartContainer">
+                      <canvas id="dataChart"></canvas>
                     </div>
                 </article>
             </section>
