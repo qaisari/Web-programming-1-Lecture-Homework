@@ -17,10 +17,18 @@ header, nav, footer {
     text-align: center;
     flex-shrink: 0;
 }
+footer{
+    background-color: rgb(0, 128, 0); /* Adjust as needed */
+    color: white;
+    text-align: center;
+    padding: 1em;
+    flex-shrink: 0;
+}
 .center {
     display: flex; /* Arrange aside and section horizontally */
     flex: 1; /* Allow this container to grow and fill vertical space */
-    overflow: hidden; /* Prevent content from overflowing the body */
+    overflow: hidden; 
+
 }
 h1.header {
     margin: 0;
@@ -301,24 +309,35 @@ label.validation-error{
     padding: 15px;
     margin: 10px;
     max-width: 300px;
-  }
+}
   
-  button {
+button {
     margin: 5px;
     padding: 8px 12px;
     cursor: pointer;
-  }
+}
   
-  .animal-sound {
-    color: #2c3e50;
-    font-weight: bold;
-  }
-  
-  .animal-action {
-    color: #e74c3c;
-    font-style: italic;
-  }
-  .game-container{
-    align-content: center;
-  }
+.animal-sound {
+    color: #4caf50; /* Green for sounds */
+}
+
+.animal-action {
+    color: #ff5722; /* Orange for actions */
+}
+#message-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    color: white; /* White text for contrast */
+    padding: 1em; /* Add some padding */
+    margin: 1em 0; /* Add spacing above and below */
+    border-radius: 8px; /* Rounded corners */
+    max-height: 200px; /* Limit the height */
+    overflow-y: auto; /* Add a scrollbar if messages exceed the height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 200px;
+}
+.animal-sound, .animal-action {
+    margin: 0.5em 0; /* Add spacing between messages */
+    font-size: 1em; /* Adjust font size */
+    font-family: Arial, sans-serif; /* Use a clean font */
+}
   
