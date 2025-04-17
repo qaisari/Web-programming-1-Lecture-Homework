@@ -87,3 +87,33 @@ function validate() {
     }
     return isValid;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const tableBody = document.getElementById('employeeList').getElementsByTagName('tbody')[0];
+
+    if (searchInput && tableBody) {
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const rows = tableBody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const row = rows[i];
+                const cells = row.getElementsByTagName('td');
+                let matchFound = false;
+
+                for (let j = 0; j < cells.length - 1; j++) { // Exclude the last cell (Actions)
+                    const cellText = cells[j].textContent || cells[j].innerText;
+                    if (cellText.toLowerCase().includes(searchTerm)) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+
+                row.style.display = matchFound ? "" : "none"; // Show or hide the row
+            }
+        });
+    } else {
+        console.error("Search input or table body not found!");
+    }
+});
