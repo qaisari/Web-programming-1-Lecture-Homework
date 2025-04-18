@@ -54,7 +54,7 @@ function withSayHello(){
 //SSE
 function serverSentEvent(){
     if(typeof(EventSource) !== "undefined"){
-        var source = new EventSource('sse.php');
+        var source = new EventSource('../sse.php');
         source.onmessage = function (event){
             document.getElementById("sse-result").innerHTML += event.data + "<br>";
         }
