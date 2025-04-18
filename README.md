@@ -73,11 +73,11 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-### Screenshot 1: [Add description here]
+### Screenshot 1: This is a picture of the HTML5 page
 
 ![Screenshot 1](pictures/html5-1.png)
 
-### Screenshot 2: [Add description here]
+### Screenshot 2: This is a picture of the table page
 
 ![Screenshot 2](pictures/new-table.png)
 
