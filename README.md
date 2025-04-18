@@ -74,11 +74,11 @@ To run this project locally, follow these steps:
 
 ### Screenshot 1: [Add description here]
 
-![Screenshot 1](path/to/screenshot1.png)
+![Screenshot 1](pictures/html5-1.png)
 
 ### Screenshot 2: [Add description here]
 
-![Screenshot 2](path/to/screenshot2.png)
+![Screenshot 2](pictures/new-table.png)
 
 ---
 
