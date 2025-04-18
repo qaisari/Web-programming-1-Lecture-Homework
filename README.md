@@ -78,7 +78,7 @@ To run this project locally, follow these steps:
 
 ### Screenshot 2: [Add description here]
 
-![Screenshot 2](path/to/screenshot2.png)
+![Screenshot 2](pictures/new-table.png)
 
 ---
 
