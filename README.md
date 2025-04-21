@@ -1,6 +1,7 @@
 # Web Programming 1 Lecture Project
 
 Welcome to the **Web Programming 1 Lecture Project**, developed by **Ayman** and **Junior** as part of our university coursework. This project showcases our understanding and application of various web programming concepts, including HTML, CSS, JavaScript, and PHP.
+First here is the link to my web site **check it out**: [Web-Programming-1-Lecture](http://web-programming-lecture.aymanandjunior.nhely.hu/pages/Home.html)
 
 ---
 
@@ -72,11 +73,11 @@ To run this project locally, follow these steps:
 
 ## Screenshots
 
-### Screenshot 1: [Add description here]
+### Screenshot 1: This is a picture of the HTML5 page
 
 ![Screenshot 1](pictures/html5-1.png)
 
-### Screenshot 2: [Add description here]
+### Screenshot 2: This is a picture of the table page
 
 ![Screenshot 2](pictures/new-table.png)
 
