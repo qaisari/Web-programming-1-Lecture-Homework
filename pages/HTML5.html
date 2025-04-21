@@ -43,7 +43,7 @@
                     <fieldset>
                         <legend><h2>Geolocation</h2></legend>
                         <p>Click the button to get your coordinates.</p>
-                        <button onclick="getLocation()">Location</button>
+                        <button onclick="getLocation()" class="locationbutton">Location</button>
                         <div class="Geolocation">
                             <p id="demo">Google maps: Waiting for GPS coordinates ...</p>
                             <p id="content-holder"></p>
@@ -56,14 +56,14 @@
                         <div class="web-worker">
                             <div class="without">
                                 <p><strong>Without-Web-Worker</strong></p>
-                                <button onclick="withoutBigLoop()">Big Loop</button>
-                                <button onclick="withoutSayHello()">Say Hello</button>
+                                <button onclick="withoutBigLoop()" class="BigLoopandSayHello">Big Loop</button>
+                                <button onclick="withoutSayHello()" class="BigLoopandSayHello">Say Hello</button>
                             </div>
                             <!--///////////////////////////////////////////////////////-->
                             <div class="with">
                                 <p><strong>With-Web-Worker</strong></p>
-                                <button onclick="withBigLoop()">Big Loop</button>
-                                <button onclick="withSayHello()">Say Hello</button>
+                                <button onclick="withBigLoop()" class="BigLoopandSayHello">Big Loop</button>
+                                <button onclick="withSayHello()" class="BigLoopandSayHello">Say Hello</button>
                             </div>
                         </div>
                     </fieldset>

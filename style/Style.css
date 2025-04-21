@@ -240,8 +240,20 @@ label.validation-error{
     display: flex;
 }
 
+.locationbutton {
+    border-radius: 5px;
+    background-color: #4ab900;
+    color: white;
+}
+
 #content-holder{
     margin-left: 20px;
+}
+
+.BigLoopandSayHello {
+    border-radius: 5px;
+    background-color: #4ab900;
+    color: white;
 }
 
 .sse{
@@ -250,9 +262,15 @@ label.validation-error{
 }
 
 .ssebutton{
-    height: 20px;
+    /* height: 20px;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: 15px; */
+    height: 1.9em;
+    padding: 0% 3px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background-color: #4ab900;
+    color: white;
 }
 
 #div1, #div2 {
@@ -269,6 +287,11 @@ label.validation-error{
 #testcanva{
     width: fit-content;
     height: fit-content;
+}
+.canvasbutton {
+    border-radius: 5px;
+    background-color: #4ab900;
+    color: white;
 }
 .svg{
     display: flex;
